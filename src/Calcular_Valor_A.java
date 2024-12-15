@@ -1,9 +1,6 @@
-public class Calcular_Valor_A extends Procedimento{
-
-    public Calcular_Valor_A() {
-    }
-
-    public void CalculoA(){
-
+public class Calcular_Valor_A implements CalculoStrategy {
+    @Override
+    public double calcular(double precoBase){
+        return  precoBase * 1.3;
     }
 }

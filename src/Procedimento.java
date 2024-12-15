@@ -1,13 +1,15 @@
 public class Procedimento {
     private String nome;
     private double preco;
+    private CalculoStrategy strategy;
 
     public Procedimento() {
 
     }
-    public Procedimento(String nome, double preco) {
+    public Procedimento(String nome, double preco, CalculoStrategy strategy) {
         this.nome = nome;
         this.preco = preco;
+        this.strategy = strategy;
     }
 
     public String getNome() {
@@ -26,7 +28,18 @@ public class Procedimento {
         this.preco = preco;
     }
 
-    public void valorBase(){
+    public CalculoStrategy getStrategy() {
+        return strategy;
+    }
 
+    public void setStrategy(CalculoStrategy strategy) {
+        this.strategy = strategy;
+    }
+
+    public double valorBase(){
+        if(strategy== null) {
+            throw new IllegalStateException("Nenhuma estratégia de cálculo definida!");
+        }
+        return strategy.calcular(preco);
     }
 }
