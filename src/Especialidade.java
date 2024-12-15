@@ -1,6 +1,15 @@
 public enum Especialidade {
-    private int PEDIATRIA;
-    private int DERMATOLOGIA;
-    private int ENDOCRINOLOGIA;
+    PEDIATRIA(1),
+    DERMATOLOGIA(2),
+    ENDOCRINOLOGIA(3);
 
+    private final int codigo;
+
+    Especialidade(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
 }

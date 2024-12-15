@@ -1,5 +1,15 @@
 public enum Status_Consulta {
-    private int MARCADA;
-    private int CANCELADA;
-    private int REMARCADA;
+    MARCADA(1),
+    CANCELADA(2),
+    REMARCADA(3);
+
+    private final int codigo;
+
+    Status_Consulta(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
 }
