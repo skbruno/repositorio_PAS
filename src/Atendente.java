@@ -3,17 +3,17 @@ public class Atendente {
     private Medico medicos_horarios;
     private PlanoSaude planos_aceitos;
     private Paciente paciente;
-    private Pagamento pagamentol;
+    private Pagamento pagamento;
 
     public Atendente() {
 
     }
-    public Atendente(String nome, Medico medicosHorarios, PlanoSaude planosAceitos, Paciente paciente, Pagamento pagamentol) {
+    public Atendente(String nome, Medico medicosHorarios, PlanoSaude planosAceitos, Paciente paciente, Pagamento pagamento) {
         this.nome = nome;
         medicos_horarios = medicosHorarios;
         planos_aceitos = planosAceitos;
         this.paciente = paciente;
-        this.pagamentol = pagamentol;
+        this.pagamento = pagamento;
     }
 
     public String getNome() {
@@ -48,12 +48,12 @@ public class Atendente {
         this.paciente = paciente;
     }
 
-    public Pagamento getPagamentol() {
-        return pagamentol;
+    public Pagamento getPagamento() {
+        return pagamento;
     }
 
-    public void setPagamentol(Pagamento pagamentol) {
-        this.pagamentol = pagamentol;
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
     }
 
     public void verificar_Disponibilidade(){
