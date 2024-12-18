@@ -16,4 +16,9 @@ public class Consulta_Estado {
     public void setStatus(Status_Consulta status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return status + " (Código: " + status.getCodigo() + ")";
+    }
 }

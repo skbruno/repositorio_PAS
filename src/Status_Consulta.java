@@ -1,7 +1,8 @@
 public enum Status_Consulta {
-    MARCADA(1),
-    CANCELADA(2),
-    REMARCADA(3);
+    INICIAL(1),
+    MARCADA(2),
+    CANCELADA(3),
+    REMARCADA(4);
 
     private final int codigo;
 

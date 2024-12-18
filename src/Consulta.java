@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Consulta {
     private Especialidade especialidade;
     private Medico medico;
@@ -6,8 +9,11 @@ public class Consulta {
     private double custoFinal;
     private int data_consulta;
 
-    public Consulta() {
+    private List<Observer> observadores = new ArrayList<>();
+    private Consulta_Estado estadoConsulta;
 
+    public Consulta() {
+        this.estadoConsulta = new Consulta_Estado(Status_Consulta.INICIAL);
     }
 
     public Consulta(Especialidade especialidade, Medico medico, Paciente paciente, PlanoSaude plano, double custoFinal, int dataConsulta) {
@@ -16,7 +22,8 @@ public class Consulta {
         this.paciente = paciente;
         this.plano = plano;
         this.custoFinal = custoFinal;
-        data_consulta = dataConsulta;
+        this.data_consulta = dataConsulta;
+        this.estadoConsulta = new Consulta_Estado(Status_Consulta.INICIAL);
     }
 
     public Especialidade getEspecialidade() {
@@ -68,11 +75,22 @@ public class Consulta {
     }
 
 
-    public void anexar(Observer Observer){
-
+    public void anexar(Observer observer) {
+        observadores.add(observer);
     }
 
-    public void notificar(){
+    public void notificar() {
+        for (Observer observer : observadores) {
+            observer.atualizar(estadoConsulta);
+        }
+    }
 
+    public void alterarEstado(Status_Consulta novoStatus) {
+        if (estadoConsulta == null) {
+            System.out.println("O estado da consulta não foi inicializado");
+        }
+        estadoConsulta.setStatus(novoStatus);
+        System.out.println("Estado da consulta alterado para: " + novoStatus);
+        notificar();
     }
 }
