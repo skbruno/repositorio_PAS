@@ -38,7 +38,7 @@ public class Procedimento {
 
     public double valorBase(){
         if(strategy== null) {
-            throw new IllegalStateException("Nenhuma estratégia de cálculo definida!");
+            System.out.println("sem estrategia de calculo definido");
         }
         return strategy.calcular(preco);
     }

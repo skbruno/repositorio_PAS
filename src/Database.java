@@ -1,11 +1,12 @@
 public class Database {
     private Consulta consulta;
-    private static Database instance;
+    private static final Database instance = new Database();
+
+    private Database(){
+
+    }
 
     public static Database getInstance() {
-        if (instance == null) {
-            instance = new Database();
-        }
         return instance;
     }
 

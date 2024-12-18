@@ -87,7 +87,7 @@ public class Consulta {
 
     public void alterarEstado(Status_Consulta novoStatus) {
         if (estadoConsulta == null) {
-            System.out.println("O estado da consulta não foi inicializado");
+            System.out.println("O estado da consulta nao foi inicializado");
         }
         estadoConsulta.setStatus(novoStatus);
         System.out.println("Estado da consulta alterado para: " + novoStatus);

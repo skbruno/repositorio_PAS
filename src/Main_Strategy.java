@@ -24,7 +24,7 @@ public class Main_Strategy {
         try {
             precoBase = Double.parseDouble(scanner.nextLine());
         } catch (NumberFormatException e) {
-            System.out.println("Preço invalido. Certifique-se de inserir um número válido.");
+            System.out.println("Preco invalido insira um numero valido.");
             scanner.close();
             return;
         }

@@ -19,6 +19,6 @@ public class Consulta_Estado {
 
     @Override
     public String toString() {
-        return status + " (Código: " + status.getCodigo() + ")";
+        return status + " (codigo: " + status.getCodigo() + ")";
     }
 }

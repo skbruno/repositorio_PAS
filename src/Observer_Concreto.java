@@ -7,6 +7,6 @@ public class Observer_Concreto extends Observer {
 
     @Override
     public void atualizar(Consulta_Estado estadoConsulta) {
-        System.out.println(nome + " foi notificado. Novo estado da consulta: " + estadoConsulta);
+        System.out.println(nome + " foi notificado sobre o novo estado da consulta: " + estadoConsulta);
     }
 }
