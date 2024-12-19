@@ -4,16 +4,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Atendente atendente = new Atendente("Ana", null, null, null, null);
+        Atendente atendente = new Atendente("Ana");
 
         while (true) {
             System.out.println("\n===== Menu =====");
             System.out.println("1 -Cadastrar paciente");
-            System.out.println("2 -Cadastrar médico");
+            System.out.println("2 -Cadastrar medico");
             System.out.println("3 -Verificar plano");
-            System.out.println("4 -Verificar horário");
+            System.out.println("4 -Verificar horario");
             System.out.println("5 -Marcar consulta");
             System.out.println("6 -Efe6tuar pagamento");
+            System.out.println("7 -Alterar Estado da Consulta");
             System.out.println("0 -Sair");
             System.out.print("Escolha uma opcao: ");
 
@@ -40,18 +41,23 @@ public class Main {
                     break;
 
                 case 4:
-
+                        atendente.verificar_Disponibilidade();
                     break;
 
                 case 5:
+                        atendente.marcar_Consulta();
                     break;
 
                 case 6:
                     atendente.efetuar_Pagamento();
                     break;
 
+                case 7:
+                    atendente.alterar_estado();
+                    break;
+
                 case 0:
-                    System.out.println("Saindo do sistema");
+                    System.out.println("Saindooooo");
                     return;
 
                 default:

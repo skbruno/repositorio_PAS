@@ -8,9 +8,19 @@ public class Consulta {
     private PlanoSaude plano;
     private double custoFinal;
     private int data_consulta;
+    private Status_Consulta status;
 
     private List<Observer> observadores = new ArrayList<>();
-    private Consulta_Estado estadoConsulta;
+
+    public Consulta_Estado getEstadoConsulta() {
+        return estadoConsulta;
+    }
+
+    public void setEstadoConsulta(Consulta_Estado estadoConsulta) {
+        this.estadoConsulta = estadoConsulta;
+    }
+
+    protected Consulta_Estado estadoConsulta;
 
     public Consulta() {
         this.estadoConsulta = new Consulta_Estado(Status_Consulta.INICIAL);

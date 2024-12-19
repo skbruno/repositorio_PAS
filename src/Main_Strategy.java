@@ -4,7 +4,7 @@ public class Main_Strategy {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Qual e o seu plano? (HAPVIDA, PARTICULAR, SAUDEUNEB)");
+        System.out.print("Qual e o seu plano? (HAPVIDA, PARTICULAR, SAUDEUNEB): ");
         String planoInput = scanner.nextLine().toUpperCase();
 
         Plano plano;
@@ -16,7 +16,7 @@ public class Main_Strategy {
             return;
         }
 
-        System.out.println("Escolha a especialidade da consulta: PEDIATRIA, DERMATOLOGIA, ENDOCRINOLOGIA ");
+        System.out.print("Escolha a especialidade da consulta: PEDIATRIA, DERMATOLOGIA, ENDOCRINOLOGIA: ");
         String especialidadeInput = scanner.nextLine().toUpperCase();
 
         Especialidade especialidade;

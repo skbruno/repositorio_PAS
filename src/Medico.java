@@ -16,12 +16,6 @@ public class Medico {
         this.horarios = horarios;
     }
 
-    public Medico(String nome, Especialidade especialidade, List<Horario_Disponivel> horarios) {
-        this.nome = nome;
-        this.especialidade = especialidade;
-        this.horarios = horarios;
-    }
-
     public String getNome() {
         return nome;
     }
