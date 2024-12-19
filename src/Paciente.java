@@ -2,25 +2,25 @@ public class Paciente {
     private String nome;
     private String rg;
     private String cpf;
-    private int data_nascimento;
-    private char sexo;
+    private int idade;
+    private String sexo;
     private Responsavel responsavel;
 
     public  Paciente() {
 
     }
-    public Paciente(String nome, String rg, String cpf, int dataNascimento, char sexo) {
+    public Paciente(String nome, String rg, String cpf, int idade, String sexo) {
         this.nome = nome;
         this.rg = rg;
         this.cpf = cpf;
-        data_nascimento = dataNascimento;
+        this.idade = idade;
         this.sexo = sexo;
     }
-    public Paciente(String nome, String rg, String cpf, int dataNascimento, char sexo, Responsavel responsavel) {
+    public Paciente(String nome, String rg, String cpf, int idade, String sexo, Responsavel responsavel) {
         this.nome = nome;
         this.rg = rg;
         this.cpf = cpf;
-        data_nascimento = dataNascimento;
+        this.idade = idade;
         this.sexo = sexo;
         this.responsavel = responsavel;
     }
@@ -42,11 +42,11 @@ public class Paciente {
     }
 
     public int getData_nascimento() {
-        return data_nascimento;
+        return idade;
     }
 
-    public void setData_nascimento(int data_nascimento) {
-        this.data_nascimento = data_nascimento;
+    public void setData_nascimento(int idade) {
+        this.idade = idade;
     }
 
     public String getCpf() {
@@ -57,11 +57,11 @@ public class Paciente {
         this.cpf = cpf;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 

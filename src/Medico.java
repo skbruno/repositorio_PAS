@@ -1,16 +1,24 @@
+import java.util.List;
+
 public class Medico {
     private String nome;
     private Especialidade especialidade;
     private Consultorio consultorio;
-    private Horario_Disponivel horarios;
+    private List<Horario_Disponivel> horarios;
 
     public Medico() {
 
     }
-    public Medico(String nome, Especialidade especialidade, Consultorio consultorio, Horario_Disponivel horarios) {
+    public Medico(String nome, Especialidade especialidade, Consultorio consultorio, List<Horario_Disponivel> horarios) {
         this.nome = nome;
         this.especialidade = especialidade;
         this.consultorio = consultorio;
+        this.horarios = horarios;
+    }
+
+    public Medico(String nome, Especialidade especialidade, List<Horario_Disponivel> horarios) {
+        this.nome = nome;
+        this.especialidade = especialidade;
         this.horarios = horarios;
     }
 
@@ -38,11 +46,11 @@ public class Medico {
         this.consultorio = consultorio;
     }
 
-    public Horario_Disponivel getHorarios() {
+    public List<Horario_Disponivel> getHorarios() {
         return horarios;
     }
 
-    public void setHorarios(Horario_Disponivel horarios) {
+    public void setHorarios(List<Horario_Disponivel> horarios) {
         this.horarios = horarios;
     }
 }
