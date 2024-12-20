@@ -89,6 +89,10 @@ public class Consulta {
         observadores.add(observer);
     }
 
+    public void desanexar(Observer observer) {
+
+    }
+
     public void notificar() {
         for (Observer observer : observadores) {
             observer.atualizar(estadoConsulta);

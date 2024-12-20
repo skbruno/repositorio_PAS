@@ -10,7 +10,6 @@ public class Database {
         return instance;
     }
 
-
     public void query_Create() {
         System.out.println("Criando.....");
     }
